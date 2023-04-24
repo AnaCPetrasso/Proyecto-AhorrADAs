@@ -54,6 +54,45 @@
                 </div>                
             </div>
             <!-- filters box -->
+            <div>
+                <h3>Filtros</h3>
+                <a>Ocultar Filtros</a>
+                <!-- filter forms -->
+                <div>
+                    <label for="filter">Tipo</label>
+                    <select name="filters" id="filters__types">
+                        <option value="all">Todos</option>
+                        <option value="spent">Gasto</option>
+                        <option value="revenue">Ganancia</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="category">Categoria</label>
+                    <select name="category" id="category__types">
+                        <option value="food">Comida</option>
+                        <option value="services">Servicios</option>
+                        <option value="go out">Salidas</option>
+                        <option value="education">Educación</option>
+                        <option value="transport">Transporte</option>
+                        <option value="work">Trabajo</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Desde</label>
+                    <input type="date" name="date">
+                </div>
+                <div>
+                    <label for="sortBy">Ordenar por</label>
+                    <select name="sortBy" id="sortBy__types">
+                        <option value="most recent">Más Reciente</option>
+                        <option value="less recent">Menos Reciente</option>
+                        <option value="greater amount">Mayor Monto</option>
+                        <option value="lower amount">Menor Monto</option>
+                        <option value="a-z">A/Z</option>
+                        <option value="z-a">Z/A</option>
+                    </select>
+                </div>
+            </div>
         </section>
     </main>
 </body>
