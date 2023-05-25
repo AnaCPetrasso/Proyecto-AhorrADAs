@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,38 @@
     <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
     <title>AhorrADAs</title>
 </head>
+
 <body>
     <!-- ---------------------------- HEADER ------------------------------------ -->
+
     <head>
-        <!-- title -->
-        <div-->
-            <i class="fa-solid fa-wallet"></i>
-            <h1>AhorrADAs</h1>
-        </div>
-        <!-- navigation links -->
-        <nav>
-            <ul>
-                <li>
-                    <i class="fa-regular fa-chart-line-up"></i>
-                    <a href="#balance">Balance</a>
-                </li>
-                <li>
-                    <i class="fa-sharp fa-solid fa-tag"></i>
-                    <a href="#categories">Categorías</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-chart-pie"></i>
-                    <a href="#reports">Reportes</a>
-                </li>
-            </ul>
-        </nav>
+        <section id="head__menu">
+            <!-- title -->
+            <div>
+                <i class="fa-solid fa-wallet"></i>
+                <h1>AhorrADAs</h1>
+            </div>
+            <!-- navigation links -->
+            <div>
+                <button id="hamburger__btn"><i class="fa-solid fa-bars "></i></button>
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-chart-line-up"></i>
+                            <a href="#balance">Balance</a>
+                        </li>
+                        <li>
+                            <i class="fa-sharp fa-solid fa-tag"></i>
+                            <a href="#categories">Categorías</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <a href="#reports">Reportes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
     </head>
     <!-- ---------------------------- MAIN ------------------------------------ -->
     <main>
@@ -43,21 +51,25 @@
                 <div>
                     <h3>Ganancias</h3>
                     <span>+$0</span>
-                </div>                
+                </div>
                 <div>
                     <h3>Gastos</h3>
                     <span>-$0</span>
-                </div>                
+                </div>
                 <div>
                     <h3>Total</h3>
                     <span>$0</span>
-                </div>                
+                </div>
             </div>
             <!-- filters box -->
             <div>
-                <h3>Filtros</h3>
-                <a>Ocultar Filtros</a>
-                <!-- filter forms -->
+                <!-- filter box title -->
+                <div>
+                    <h3>Filtros</h3>
+                    <a>Ocultar Filtros</a>
+                </div>
+                <!-- filter box forms -->
+                <!-- type -->
                 <div>
                     <label for="filter">Tipo</label>
                     <select name="filters" id="filters__types">
@@ -66,6 +78,7 @@
                         <option value="revenue">Ganancia</option>
                     </select>
                 </div>
+                <!-- category -->
                 <div>
                     <label for="category">Categoria</label>
                     <select name="category" id="category__types">
@@ -94,60 +107,47 @@
                 </div>
             </div>
             <!-- operations box -->
-             <div class="operation__title">
-                <h3>Operaciones</h3>
-                <button>+ Nueva Operación</button>
-             </div>
-             <div class="operation__empty">
-                <figure>
-                    <img src="https://frontend-proyecto-ahorradas.adaitw.org/imgs/wallet.svg" alt="imagen de billetera">
-                    <figcaption>
-                        <p>Sin resultados</p>
-                        <p>Cambia los filtros o agrega operaciones</p>
-                    </figcaption>
-                </figure>
-             </div>
-             <div class="operaticon__chart">
-                <!-- dejarlo libre para crear la table desde js -->
+            <div>
+                <div class="operation__title">
+                    <h3>Operaciones</h3>
+                    <button>+ Nueva Operación</button>
+                </div>
+                <div class="operation__empty">
+                    <figure>
+                        <img src="https://frontend-proyecto-ahorradas.adaitw.org/imgs/wallet.svg"
+                            alt="imagen de billetera">
+                        <figcaption>
+                            <p>Sin resultados</p>
+                            <p>Cambia los filtros o agrega operaciones</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="operaticon__chart">
+                    <!-- let it free to create a table from Js -->
+                </div>
             </div>
+
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ CATEGORIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
         <section id="categories">
             <div class="categories__box">
                 <h2>Categorías</h2>
                 <div>
-                    <p>Nombre</p>
-                    <input type="text">
+                    <div>
+                        <label for="categories">Nombre</label>
+                        <input type="text" name="categories">
+                    </div>
                     <button>Agregar</button>
                 </div>
-                <!-- categorias predeterminadas -->
+                <!-- default categories -->
                 <div>
-                    <div>
-                        <p>Servicios</p>
-                        <a href="">Editar</a>
-                        <a href="">Eliminar</a>
+                    <div class="categorie flex justify-between py-5">
+                        <span>Servicios</span>
+                        <div>
+                            <a href="">Editar</a>
+                            <a href="">Eliminar</a>
+                        </div>
                     </div>
-                    <div>
-                        <p>Salidas</p>
-                        <a href="">Editar</a>
-                        <a href="">Eliminar</a>
-                    </div>
-                    <div>
-                        <p>Educación</p>
-                        <a href="">Editar</a>
-                        <a href="">Eliminar</a>
-                    </div>
-                    <div>
-                        <p>Transporte</p>
-                        <a href="">Editar</a>
-                        <a href="">Eliminar</a>
-                    </div>
-                    <div>
-                        <p>Trabajo</p>
-                        <a href="">Editar</a>
-                        <a href="">Eliminar</a>
-                    </div>
-                    <!-- categorias a agregar  -->
                 </div>
             </div>
         </section>
@@ -155,15 +155,15 @@
         <section id="reports">
             <div class="reports__box">
                 <h2>Reportes</h2>
-            </div>
-            <div class="reports__empty">
-                <figure>
-                    <img src="https://frontend-proyecto-ahorradas.adaitw.org/imgs/chart.svg" alt="graficos">
-                    <figcaption>
-                        <p>Operaciones Insuficientes</p>
-                        <p>Prueba agregando más operaciones</p>
-                    </figcaption>
-                </figure>
+                <div class="reports__empty">
+                    <figure>
+                        <img src="https://frontend-proyecto-ahorradas.adaitw.org/imgs/chart.svg" alt="graficos">
+                        <figcaption>
+                            <p>Operaciones Insuficientes</p>
+                            <p>Prueba agregando más operaciones</p>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
     </main>
@@ -179,4 +179,5 @@
         <p class="footer__text"> Copyright &copy; 2023 Ana Carolina Petrasso</p>
     </footer>
 </body>
+
 </html>
