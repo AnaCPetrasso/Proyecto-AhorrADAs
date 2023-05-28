@@ -11,6 +11,7 @@
 
 <body>
     <!-- ---------------------------- HEADER ------------------------------------ -->
+
     <head>
         <section id="head__menu">
             <!-- title -->
@@ -19,25 +20,29 @@
                 <h1>AhorrADAs</h1>
             </div>
             <!-- navigation links -->
+            <nav>
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-chart-line-up"></i>
+                        <a href="#balance">Balance</a>
+                    </li>
+                    <li>
+                        <i class="fa-sharp fa-solid fa-tag"></i>
+                        <a href="#categories">Categorías</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <a href="#reports">Reportes</a>
+                    </li>
+                </ul>
+            </nav>
             <div>
-                <button id="hamburger__btn"><i class="fa-solid fa-bars "></i></button>
-                <nav>
-                    <ul>
-                        <li>
-                            <i class="fa-regular fa-chart-line-up"></i>
-                            <a href="#balance">Balance</a>
-                        </li>
-                        <li>
-                            <i class="fa-sharp fa-solid fa-tag"></i>
-                            <a href="#categories">Categorías</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-chart-pie"></i>
-                            <a href="#reports">Reportes</a>
-                        </li>
-                    </ul>
-                </nav>
+                <button id="burger__btn">
+                    <i class="fa-solid fa-bars block text-xl"></i>
+                    <i class="fa-solid fa-xmark hidden text-2xl"></i>
+                </button>
             </div>
+
         </section>
     </head>
     <!-- ---------------------------- MAIN ------------------------------------ -->
@@ -128,7 +133,7 @@
 
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ CATEGORIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="categories"class="categories">
+        <section id="categories" class="categories">
             <div class="categories__box">
                 <h2>Categorías</h2>
                 <div>
@@ -169,20 +174,20 @@
         <section id="view operation" class="operations">
             <div class="box ">
                 <div class="box__title">
-                    <h3 >Nueva operación</h3>
+                    <h3>Nueva operación</h3>
                     <!-- new operations form  -->
-                    <form > 
+                    <form>
                         <label for="description">Descripción</label>
                         <input type="text" name="description">
                         <label for="amount">Monto</label>
                         <input type="number" name="amount">
                         <label for="type">Tipo</label>
-                        <select name="type" id="operation__type" >
+                        <select name="type" id="operation__type">
                             <option value="spent">Gasto</option>
                             <option value="profit">Ganancia</option>
                         </select>
                         <label for="categories">Categoría</label>
-                        <select name="categorie" id="operation__categories" >
+                        <select name="categorie" id="operation__categories">
                             <option value="food">Comida</option>
                             <option value="services">Servicios</option>
                             <option value="go out">Salidas</option>
@@ -191,13 +196,13 @@
                             <option value="work">Trabajo</option>
                         </select>
                         <label for="date">Fecha</label>
-                        <input type="date" name="date" id="operation__date" >
+                        <input type="date" name="date" id="operation__date">
                     </form>
-                    <div >
+                    <div>
                         <button>Cancelar</button>
-                        <button >Agregar</button>
+                        <button>Agregar</button>
                     </div>
-                </div>   
+                </div>
             </div>
         </section>
     </main>
