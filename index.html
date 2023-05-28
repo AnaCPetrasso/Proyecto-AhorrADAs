@@ -11,7 +11,6 @@
 
 <body>
     <!-- ---------------------------- HEADER ------------------------------------ -->
-
     <head>
         <section id="head__menu">
             <!-- title -->
@@ -44,7 +43,7 @@
     <!-- ---------------------------- MAIN ------------------------------------ -->
     <main>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ BALANCE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="balance">
+        <section id="balance" class="balance">
             <!-- balance box -->
             <div>
                 <h2>Balance</h2>
@@ -129,7 +128,7 @@
 
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ CATEGORIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="categories">
+        <section id="categories"class="categories">
             <div class="categories__box">
                 <h2>Categorías</h2>
                 <div>
@@ -152,7 +151,7 @@
             </div>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ REPORTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="reports">
+        <section id="reports" class="reports">
             <div class="reports__box">
                 <h2>Reportes</h2>
                 <div class="reports__empty">
@@ -164,6 +163,41 @@
                         </figcaption>
                     </figure>
                 </div>
+            </div>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~ NEW OPERATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
+        <section id="view operation" class="operations">
+            <div class="box ">
+                <div class="box__title">
+                    <h3 >Nueva operación</h3>
+                    <!-- new operations form  -->
+                    <form > 
+                        <label for="description">Descripción</label>
+                        <input type="text" name="description">
+                        <label for="amount">Monto</label>
+                        <input type="number" name="amount">
+                        <label for="type">Tipo</label>
+                        <select name="type" id="operation__type" >
+                            <option value="spent">Gasto</option>
+                            <option value="profit">Ganancia</option>
+                        </select>
+                        <label for="categories">Categoría</label>
+                        <select name="categorie" id="operation__categories" >
+                            <option value="food">Comida</option>
+                            <option value="services">Servicios</option>
+                            <option value="go out">Salidas</option>
+                            <option value="education">Educación</option>
+                            <option value="transport">Transporte</option>
+                            <option value="work">Trabajo</option>
+                        </select>
+                        <label for="date">Fecha</label>
+                        <input type="date" name="date" id="operation__date" >
+                    </form>
+                    <div >
+                        <button>Cancelar</button>
+                        <button >Agregar</button>
+                    </div>
+                </div>   
             </div>
         </section>
     </main>
