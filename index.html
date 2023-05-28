@@ -137,23 +137,23 @@
 
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ CATEGORIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="categories" class="categories">
-            <div class="categories__box">
-                <h2>Categorías</h2>
-                <div>
-                    <div>
+        <section id="view categories" class="categories flex flex-col">
+            <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-20 p-3 border flex flex-col">
+                <h2 class="text-4xl font-semibold">Categorías</h2>
+                <div class="flex justify-between items-end pt-5">
+                    <form class=" flex flex-col w-9/12">
                         <label for="categories">Nombre</label>
-                        <input type="text" name="categories">
-                    </div>
-                    <button>Agregar</button>
+                        <input type="text" name="categories" class="w-full p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
+                    </form>
+                    <button class="btn bg-teal-500 hover:bg-teal-600 px-4 py-2 mb-2 text-center border rounded-lg border-teal-500 hover:border-teal-600  text-slate-50">Agregar</button>
                 </div>
                 <!-- default categories -->
                 <div>
                     <div class="categorie flex justify-between py-5">
-                        <span>Servicios</span>
+                        <span class="bg-emerald-200 text-emerald-800 px-2  rounded-lg">Servicios</span>
                         <div>
-                            <a href="">Editar</a>
-                            <a href="">Eliminar</a>
+                            <a href="" class="text-sky-700 hover:text-slate-950 px-3">Editar</a>
+                            <a href="" class="text-sky-700 hover:text-slate-950">Eliminar</a>
                         </div>
                     </div>
                 </div>
