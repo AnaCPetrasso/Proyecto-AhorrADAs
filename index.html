@@ -49,11 +49,11 @@
     <!-- ---------------------------- MAIN ------------------------------------ -->
     <main class="main text-gray-700 ">
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ BALANCE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="view balance" class="balance flex flex-col mx-auto lg:flex-row lg:justify-center lg:items-start lg:w-6/12">
+        <section id="view balance" class="balance flex flex-col mx-auto lg:flex-row lg:justify-center lg:items-start">
             <!-- for min-width: 1024px balance box and filter box are together on the mas div -->
-            <div>
+            <div >
                 <!-- balance box -->
-                <div class="box bg-stone-50 rounded-md   mx-auto mt-20 p-3 border  flex flex-col lg:mt-5 lg:mx-0 lg:w-96">
+                <div class="box bg-stone-50 rounded-md mt-20 p-3 border  flex flex-col lg:mt-5 lg:mx-0 lg:w-96">
                     <h2 class="text-4xl font-semibold ">Balance</h2>
                     <div class="text-xl flex justify-between pt-3">
                         <h3>Ganancias</h3>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <!-- filters box -->
-                <div class="box bg-stone-50 rounded-md  mx-auto mt-5  p-3 border  flex flex-col text-xl lg:mt-5 lg:mx-0 lg:w-96">
+                <div class="box bg-stone-50 rounded-md  mt-5  p-3 border  flex flex-col text-xl lg:mt-5 lg:mx-0 lg:w-96">
                     <!-- filter box title -->
                     <div class="box__title flex justify-between items-center pb-3">
                         <h3 class="text-3xl font-semibold">Filtros</h3>
@@ -115,7 +115,7 @@
                 </div>
             </div>                
             <!-- operations box -->
-            <div class="box bg-stone-50 rounded-md mx-auto mt-5 mb-24 p-3 border  flex flex-col text-xl lg:w-6/12 lg:mx-5 lg:my-5">
+            <div class="box bg-stone-50 rounded-md mx-auto mt-5 mb-24 p-3 border  flex flex-col text-xl lg:mx-5 lg:my-5 lg:w-4/12">
                 <div class="box__title flex flex-col justify-between items-start pb-3 lg:flex-row ">
                     <h3 class="text-3xl font-semibold pb-3">Operaciones</h3>
                     <button class="bg-teal-500 hover:bg-teal-600  px-5 py-2 border rounded-lg border-teal-500 hover:border-teal-600 text-base text-slate-50 ">+ Nueva Operación</button>
@@ -130,14 +130,14 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="operaticon__chart">
+                <div class="operaticon__chart hidden">
                     <!-- let it free to create a table from Js -->
                 </div>
             </div>
 
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ CATEGORIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="view categories" class="categories flex flex-col">
+        <section id="view categories" class="categories flex flex-col hidden">
             <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-20 p-3 border flex flex-col lg:w-6/12">
                 <h2 class="text-4xl font-semibold">Categorías</h2>
                 <div class="flex justify-between items-end pt-5">
@@ -160,7 +160,7 @@
             </div>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ REPORTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="reports" class="reports flex flex-col">
+        <section id="reports" class="reports flex flex-col hidden">
             <div class="box box bg-stone-50 rounded-md w-11/12  mx-auto mt-20 p-3 border  flex flex-col lg:w-6/12">
                 <h2 class="text-4xl font-semibold">Reportes</h2>
                 <div class="reports__empty mt-9">
@@ -175,7 +175,7 @@
             </div>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ NEW OPERATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="view operation" class="operations flex flex-col ">
+        <section id="view operation" class="operations flex flex-col hidden">
             <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-5 mb-24 p-3 border flex flex-col text-xl lg:w-6/12 ">
                 <div class="box__title flex flex-col justify-between items-start ">
                     <h3 class="text-3xl font-semibold pb-3">Nueva operación</h3>
@@ -212,7 +212,7 @@
     </main>
     <!-- ---------------------------- FOOTER ------------------------------------ -->
     <footer class="footer bg-teal-400 flex flex-col justify-between items-center fixed bottom-0 w-full">
-        <ul class="footer__ul flex"">
+        <ul class="footer__ul flex">
             <li class="text-2xl text-teal-900 p-3 hover:text-rose-800"><a href="https://www.linkedin.com/in/ana-carolina-petrasso/"><i class="fa-brands fa-linkedin"></i></a>
             </li>
             <li class="text-2xl text-teal-900 p-3 hover:text-rose-800"><a href="https://github.com/AnaCPetrasso"><i class="fa-brands fa-github"></i></a>
