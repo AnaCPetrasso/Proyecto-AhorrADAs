@@ -21,17 +21,17 @@
                 <h1 class="text-2xl lg:text-4xl">AhorrADAs</h1>
             </div>
             <!-- navigation links -->
-            <nav>
-                <ul>
-                    <li>
+            <nav class="hidden lg:flex" id="navbar">
+                <ul class="flex ">
+                    <li class="font-medium text-base px-2  py-2 mx-2 flex justify-center items-center rounded-lg hover:bg-teal-600 cursor-pointer">
                         <i class="fa-regular fa-chart-line-up"></i>
                         <a href="#balance">Balance</a>
                     </li>
-                    <li>
+                    <li class="font-medium text-base px-2  py-2 mx-2 flex justify-center items-center rounded-lg hover:bg-teal-600 cursor-pointer">
                         <i class="fa-sharp fa-solid fa-tag"></i>
                         <a href="#categories">Categorías</a>
                     </li>
-                    <li>
+                    <li class="font-medium text-base px-2  py-2 mx-2 flex justify-center items-center rounded-lg hover:bg-teal-600 cursor-pointer">
                         <i class="fa-solid fa-chart-pie"></i>
                         <a href="#reports">Reportes</a>
                     </li>
@@ -47,83 +47,86 @@
         </section>
     </head>
     <!-- ---------------------------- MAIN ------------------------------------ -->
-    <main>
+    <main class="main text-gray-700">
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ BALANCE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="balance" class="balance">
-            <!-- balance box -->
+        <section id="view balance" class="balance flex flex-col lg:flex-row lg:justify-center lg:items-start "">
+            <!-- for min-width: 1024px balance box and filter box are together on the mas div -->
             <div>
-                <h2>Balance</h2>
-                <div>
-                    <h3>Ganancias</h3>
-                    <span>+$0</span>
+                <!-- balance box -->
+                <div class="box bg-stone-50 rounded-md w-11/12  mx-auto mt-20 p-3 border  flex flex-col lg:mt-5 lg:mx-0 lg:w-96">
+                    <h2 class="text-4xl font-semibold ">Balance</h2>
+                    <div class="text-xl flex justify-between pt-3">
+                        <h3>Ganancias</h3>
+                        <span class="text-green-600">+$0</span>
+                    </div>
+                    <div class="text-xl flex justify-between pt-3">
+                        <h3>Gastos</h3>
+                        <span class="text-red-600">-$0</span>
+                    </div>
+                    <div class="text-xl flex justify-between pt-3">
+                        <h3>Total</h3>
+                        <span class="text-xl">$0</span>
+                    </div>
                 </div>
-                <div>
-                    <h3>Gastos</h3>
-                    <span>-$0</span>
+                <!-- filters box -->
+                <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-5  p-3 border  flex flex-col text-xl lg:mt-5 lg:mx-0 lg:w-96">
+                    <!-- filter box title -->
+                    <div class="box__title flex justify-between items-center pb-3">
+                        <h3 class="text-3xl font-semibold">Filtros</h3>
+                        <a class="text-sky-700 cursor-pointer hover:text-slate-950">Ocultar Filtros</a>
+                    </div>
+                    <!-- filter box forms -->
+                    <!-- type -->
+                    <form class="filter__form flex flex-col">
+                        <label for="filter">Tipo</label>
+                        <select name="filters" id="filters__types" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
+                            <option value="all">Todos</option>
+                            <option value="spent">Gasto</option>
+                            <option value="revenue">Ganancia</option>
+                        </select>
+                    </form>
+                    <!-- category -->
+                    <form class="filter__form flex flex-col">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category__types" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
+                            <option value="food">Comida</option>
+                            <option value="services">Servicios</option>
+                            <option value="go out">Salidas</option>
+                            <option value="education">Educación</option>
+                            <option value="transport">Transporte</option>
+                            <option value="work">Trabajo</option>
+                        </select>
+                    </form>
+                    <form class="filter__form flex flex-col">
+                        <label for="date">Desde</label>
+                        <input type="date" name="date" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
+                    </form>
+                    <form class="filter__form flex flex-col">
+                        <label for="sortBy">Ordenar por</label>
+                        <select name="sortBy" id="sortBy__types" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
+                            <option value="most recent">Más Reciente</option>
+                            <option value="less recent">Menos Reciente</option>
+                            <option value="greater amount">Mayor Monto</option>
+                            <option value="lower amount">Menor Monto</option>
+                            <option value="a-z">A/Z</option>
+                            <option value="z-a">Z/A</option>
+                        </select>
+                    </form>
                 </div>
-                <div>
-                    <h3>Total</h3>
-                    <span>$0</span>
-                </div>
-            </div>
-            <!-- filters box -->
-            <div>
-                <!-- filter box title -->
-                <div>
-                    <h3>Filtros</h3>
-                    <a>Ocultar Filtros</a>
-                </div>
-                <!-- filter box forms -->
-                <!-- type -->
-                <div>
-                    <label for="filter">Tipo</label>
-                    <select name="filters" id="filters__types">
-                        <option value="all">Todos</option>
-                        <option value="spent">Gasto</option>
-                        <option value="revenue">Ganancia</option>
-                    </select>
-                </div>
-                <!-- category -->
-                <div>
-                    <label for="category">Categoria</label>
-                    <select name="category" id="category__types">
-                        <option value="food">Comida</option>
-                        <option value="services">Servicios</option>
-                        <option value="go out">Salidas</option>
-                        <option value="education">Educación</option>
-                        <option value="transport">Transporte</option>
-                        <option value="work">Trabajo</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="date">Desde</label>
-                    <input type="date" name="date">
-                </div>
-                <div>
-                    <label for="sortBy">Ordenar por</label>
-                    <select name="sortBy" id="sortBy__types">
-                        <option value="most recent">Más Reciente</option>
-                        <option value="less recent">Menos Reciente</option>
-                        <option value="greater amount">Mayor Monto</option>
-                        <option value="lower amount">Menor Monto</option>
-                        <option value="a-z">A/Z</option>
-                        <option value="z-a">Z/A</option>
-                    </select>
-                </div>
-            </div>
+            </div>                
             <!-- operations box -->
-            <div>
-                <div class="operation__title">
-                    <h3>Operaciones</h3>
-                    <button>+ Nueva Operación</button>
+            <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-5 mb-24 p-3 border  flex flex-col text-xl lg:w-6/12 lg:mx-5 lg:my-5">
+                <div class="box__title flex flex-col justify-between items-start pb-3 lg:flex-row ">
+                    <h3 class="text-3xl font-semibold pb-3">Operaciones</h3>
+                    <button class="bg-teal-500 hover:bg-teal-600  px-5 py-2 border rounded-lg border-teal-500 hover:border-teal-600 text-base text-slate-50 ">+ Nueva Operación</button>
                 </div>
                 <div class="operation__empty">
-                    <figure>
-                        <img src="https://frontend-proyecto-ahorradas.adaitw.org/imgs/wallet.svg"
+                    <figure class="flex flex-col justify-between items-center m-2">
+                        <img  class="w-5/12 lg:w-10/12" src="https://frontend-proyecto-ahorradas.adaitw.org/imgs/wallet.svg"
                             alt="imagen de billetera">
-                        <figcaption>
-                            <p>Sin resultados</p>
-                            <p>Cambia los filtros o agrega operaciones</p>
+                        <figcaption class="flex flex-col items-center m-2 p-3">
+                            <p class="text-2xl text-center">Sin resultados</p>
+                            <p class="text-base text-center">Cambia los filtros o agrega operaciones</p>
                         </figcaption>
                     </figure>
                 </div>
