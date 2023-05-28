@@ -47,13 +47,13 @@
         </section>
     </head>
     <!-- ---------------------------- MAIN ------------------------------------ -->
-    <main class="main text-gray-700">
+    <main class="main text-gray-700 ">
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ BALANCE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="view balance" class="balance flex flex-col lg:flex-row lg:justify-center lg:items-start "">
+        <section id="view balance" class="balance flex flex-col mx-auto lg:flex-row lg:justify-center lg:items-start lg:w-6/12">
             <!-- for min-width: 1024px balance box and filter box are together on the mas div -->
             <div>
                 <!-- balance box -->
-                <div class="box bg-stone-50 rounded-md w-11/12  mx-auto mt-20 p-3 border  flex flex-col lg:mt-5 lg:mx-0 lg:w-96">
+                <div class="box bg-stone-50 rounded-md   mx-auto mt-20 p-3 border  flex flex-col lg:mt-5 lg:mx-0 lg:w-96">
                     <h2 class="text-4xl font-semibold ">Balance</h2>
                     <div class="text-xl flex justify-between pt-3">
                         <h3>Ganancias</h3>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <!-- filters box -->
-                <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-5  p-3 border  flex flex-col text-xl lg:mt-5 lg:mx-0 lg:w-96">
+                <div class="box bg-stone-50 rounded-md  mx-auto mt-5  p-3 border  flex flex-col text-xl lg:mt-5 lg:mx-0 lg:w-96">
                     <!-- filter box title -->
                     <div class="box__title flex justify-between items-center pb-3">
                         <h3 class="text-3xl font-semibold">Filtros</h3>
@@ -115,7 +115,7 @@
                 </div>
             </div>                
             <!-- operations box -->
-            <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-5 mb-24 p-3 border  flex flex-col text-xl lg:w-6/12 lg:mx-5 lg:my-5">
+            <div class="box bg-stone-50 rounded-md mx-auto mt-5 mb-24 p-3 border  flex flex-col text-xl lg:w-6/12 lg:mx-5 lg:my-5">
                 <div class="box__title flex flex-col justify-between items-start pb-3 lg:flex-row ">
                     <h3 class="text-3xl font-semibold pb-3">Operaciones</h3>
                     <button class="bg-teal-500 hover:bg-teal-600  px-5 py-2 border rounded-lg border-teal-500 hover:border-teal-600 text-base text-slate-50 ">+ Nueva Operación</button>
@@ -138,7 +138,7 @@
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ CATEGORIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
         <section id="view categories" class="categories flex flex-col">
-            <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-20 p-3 border flex flex-col">
+            <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-20 p-3 border flex flex-col lg:w-6/12">
                 <h2 class="text-4xl font-semibold">Categorías</h2>
                 <div class="flex justify-between items-end pt-5">
                     <form class=" flex flex-col w-9/12">
@@ -161,7 +161,7 @@
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ REPORTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
         <section id="reports" class="reports flex flex-col">
-            <div class="box box bg-stone-50 rounded-md w-11/12  mx-auto mt-20 p-3 border  flex flex-col">
+            <div class="box box bg-stone-50 rounded-md w-11/12  mx-auto mt-20 p-3 border  flex flex-col lg:w-6/12">
                 <h2 class="text-4xl font-semibold">Reportes</h2>
                 <div class="reports__empty mt-9">
                     <figure class="flex flex-col justify-between items-center m-2">
@@ -175,23 +175,23 @@
             </div>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~ NEW OPERATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
-        <section id="view operation" class="operations">
-            <div class="box ">
-                <div class="box__title">
-                    <h3>Nueva operación</h3>
+        <section id="view operation" class="operations flex flex-col ">
+            <div class="box bg-stone-50 rounded-md w-11/12 mx-auto mt-5 mb-24 p-3 border flex flex-col text-xl lg:w-6/12 ">
+                <div class="box__title flex flex-col justify-between items-start ">
+                    <h3 class="text-3xl font-semibold pb-3">Nueva operación</h3>
                     <!-- new operations form  -->
-                    <form>
+                    <form class="flex flex-col w-full">  
                         <label for="description">Descripción</label>
-                        <input type="text" name="description">
+                        <input type="text" name="description" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
                         <label for="amount">Monto</label>
-                        <input type="number" name="amount">
+                        <input type="number" name="amount" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
                         <label for="type">Tipo</label>
-                        <select name="type" id="operation__type">
+                        <select name="type" id="operation__type" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
                             <option value="spent">Gasto</option>
                             <option value="profit">Ganancia</option>
                         </select>
                         <label for="categories">Categoría</label>
-                        <select name="categorie" id="operation__categories">
+                        <select name="categorie" id="operation__categories" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
                             <option value="food">Comida</option>
                             <option value="services">Servicios</option>
                             <option value="go out">Salidas</option>
@@ -200,26 +200,26 @@
                             <option value="work">Trabajo</option>
                         </select>
                         <label for="date">Fecha</label>
-                        <input type="date" name="date" id="operation__date">
+                        <input type="date" name="date" id="operation__date" class="p-2 border rounded-lg my-2 text-lg bg-stone-50 cursor-pointer focus:ring-2">
                     </form>
-                    <div>
-                        <button>Cancelar</button>
-                        <button>Agregar</button>
+                    <div class="flex w-full justify-end">
+                        <button class="bg-slate-400 hover:bg-slate-600 px-5 py-2 mx-2 border rounded-lg border-slate-400 hover:border-slate-600 text-base text-slate-50 ">Cancelar</button>
+                        <button class="bg-teal-500 hover:bg-teal-600 px-5 py-2 mx-2 border rounded-lg border-teal-500 hover:border-teal-600 text-base text-slate-50  ">Agregar</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <!-- ---------------------------- FOOTER ------------------------------------ -->
-    <footer class="footer">
-        <ul class="footer__ul">
-            <li><a href="https://www.linkedin.com/in/ana-carolina-petrasso/"><i class="fa-brands fa-linkedin"></i></a>
+    <footer class="footer bg-teal-400 flex flex-col justify-between items-center fixed bottom-0 w-full">
+        <ul class="footer__ul flex"">
+            <li class="text-2xl text-teal-900 p-3 hover:text-rose-800"><a href="https://www.linkedin.com/in/ana-carolina-petrasso/"><i class="fa-brands fa-linkedin"></i></a>
             </li>
-            <li><a href="https://github.com/AnaCPetrasso"><i class="fa-brands fa-github"></i></a>
+            <li class="text-2xl text-teal-900 p-3 hover:text-rose-800"><a href="https://github.com/AnaCPetrasso"><i class="fa-brands fa-github"></i></a>
             </li>
-            <li><a href="mailto:carolina15petrasso@gmail.com"><i class="fa-solid fa-square-envelope"></i></a></li>
+            <li class="text-2xl text-teal-900 p-3 hover:text-rose-800"><a href="mailto:carolina15petrasso@gmail.com"><i class="fa-solid fa-square-envelope"></i></a></li>
         </ul>
-        <p class="footer__text"> Copyright &copy; 2023 Ana Carolina Petrasso</p>
+        <p class="footer__text  text-teal-900"> Copyright &copy; 2023 Ana Carolina Petrasso</p>
     </footer>
 </body>
 
